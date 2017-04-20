@@ -1,0 +1,32 @@
+*{
+
+    margin: 0;
+
+}
+.apilist{
+
+    margin-top: 10px;
+}
+
+.caption p{
+
+
+    color:red;
+}
+a{
+
+    display: block;
+    height: 40px;
+    margin: 5px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #98bf21;
+}
+
+.content{
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
