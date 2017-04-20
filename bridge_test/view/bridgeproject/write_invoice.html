@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bridge_datetime</title>
+    <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+
+    <script src="../../js/bridge.2.2.6.js"></script>
+    <script src="../../js/bridgeproject/bwrite_invoice.js"></script>
+
+
+</head>
+<body>
+<div class="content">
+
+    <h4>write_invoice</h4>
+    <p>开发票控件</p>
+    <p>828 增加invoiceDesc节点，发票类型切换，底部说明切换</p>
+    <a href="javascript:void(0)" onclick="_project.fwrite_invoice()">填写发票信息，配置可选的发票信息，不配置选中发票信息</a>
+    <a href="javascript:void(0)" onclick="_project.fwrite_invoice('1')">填写发票信息，配置可选的发票信息，选中发票信息</a>
+    <a href="javascript:void(0)" onclick="_project.fwrite_invoice('2')">填写发票信息，测试的发票类型，去掉invoiceDesc字段</a>
+
+    <p>用例</p>
+
+
+</div>
+
+</body>
+</html>

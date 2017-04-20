@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bridge_datetime</title>
+    <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+
+    <script src="../../js/bridge.2.2.6.js"></script>
+    <script src="../../js/bridgedatetime/bpick_datetime.js"></script>
+
+
+</head>
+<body>
+<div class="content">
+
+    <h4>pick_datetime</h4>
+    <p>调用选择时间控件</p>
+    <p>828 修复之前存在bug,结束时间在同一个月，结束时间失效</p>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime828('2017-04-25 16:40','1440');">同年同月</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime828('2017-05-25 16:40','1440');">同年不同月</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime828('2018-04-25 16:40','1440');">不同年不同月</a>
+    <p>用例</p>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('5');">获取时间间隔5分钟</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('10');">获取时间间隔10分钟</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('30');">获取时间间隔30分钟</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('60');">获取时间间隔60分钟</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('120');">获取时间间隔120分钟(2h)</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('720');">获取时间间隔720分钟(12h)</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_datetime('1440');">获取时间间隔1440分钟(24h)</a>
+    <a href="javascript:void(0)" onclick="_datetime.pick_date();">获取日期</a>
+
+</div>
+
+</body>
+</html>

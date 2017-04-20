@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bridge_util</title>
+    <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+
+    <script src="../../js/bridge.2.2.6.js"></script>
+    <script src="../../js/bridgeutil/index_config.js"></script>
+
+
+</head>
+<body>
+<div class="content">
+
+    <h4>get_index_config</h4>
+    <p>获取首页配置</p>
+
+    <p>828新增节点getShareInfo : Object (optional)
+        是否返回首页配置接口对应的shareInfo(分享配置)。 since 8.2.8</p>
+    <a href="javascript:void(0)" onclick="_indexConfig.getIndexConfig();">获取首页配置，获取getShareInfo的内容(selftrip)</a>
+    <a href="javascript:void(0)" onclick="_indexConfig.getIndexConfig('hotel');">获取首页配置，获取getShareInfo的内容(hotel)</a>
+    <a href="javascript:void(0)" onclick="_indexConfig.getIndexConfig('train');">获取首页配置，获取getShareInfo的内容(train)</a>
+
+</div>
+
+</body>
+</html>

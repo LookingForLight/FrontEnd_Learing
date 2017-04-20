@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bridge_util</title>
+    <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+
+    <script src="../../js/bridge.2.2.6.js"></script>
+    <script src="../../js/bridgeutil/alarm_info.js"></script>
+
+
+</head>
+<body>
+<div class="content">
+
+    <h4>alarm_info</h4>
+    <p>本地通知相关api:get set cancel</p>
+
+    <p>828修复ios本地通知相关问题</p>
+    <a href="javascript:void(0)" onclick="_alarm_info.fset_alarm_info();">设置本地消息</a>
+    <a href="javascript:void(0)" onclick="_alarm_info.fget_alarm_info('0');">获取本地消息,已设置跳转链接的本地通知</a>
+    <a href="javascript:void(0)" onclick="_alarm_info.fget_alarm_info('1');">获取本地消息,未设置跳转链接的本地通知</a>
+    <a href="javascript:void(0)" onclick="_alarm_info.fcancel_alarm_info('0');">取消本地消息,设置跳转链接的本地通知</a>
+    <a href="javascript:void(0)" onclick="_alarm_info.fcancel_alarm_info('1');">取消本地消息,未设置跳转链接的本地通知</a>
+
+
+
+
+
+</div>
+
+</body>
+</html>

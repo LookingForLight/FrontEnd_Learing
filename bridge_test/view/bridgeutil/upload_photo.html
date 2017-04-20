@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bridge_util</title>
+    <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+
+    <script src="../../js/bridge.2.2.6.js"></script>
+    <script src="../../js/bridgeutil/uploadphoto.js"></script>
+
+
+</head>
+<body>
+<div class="content">
+
+    <h4>upload_photo</h4>
+    <p>图片上传</p>
+    <p>图片上传方式</p>
+    <p> "0" : 默认，手动操作上传
+        "1" : 选择图片返回后直接上传。since 8.1.8
+        "2" : 选择图片完成后 直接以base64格式回传前端 since 8.2.8
+        "3" : 项目自定义配置接口，返回接口响应字符串（成功返回，失败提示) 建议上传敏感信息时使用 since 8.2.8</p>
+
+    <a href="javascript:void(0)" onclick="_update.fupdate_photo();">使用默认方式，人工操作上传2张图片</a>
+    <a href="javascript:void(0)" onclick="_update.fupdate_photo(null,'1');">选择图片返回后直接上传</a>
+    <a href="javascript:void(0)" onclick="_update.fupdate_photo(null,'2');">选择图片完成后 直接以base64格式回传前端</a>
+    <a href="javascript:void(0)" onclick="_update.fupdate_photo(null,'3');">项目自定义配置接口，返回接口响应字符串</a>
+
+    <h4>crop_photo</h4>
+    <p>裁剪图片</p>
+    <a href="javascript:void(0)" onclick="_update.fcrop_photo();">裁剪图片320*480</a>
+    <a href="javascript:void(0)" onclick="_update.fcrop_photo('160','160');">裁剪图片160*160</a>
+    <a href="javascript:void(0)" onclick="_update.fcrop_photo('160','160','guoneiyou','1');">裁剪图片160*160,传projecttag,传upToServer:1</a>
+    <a href="javascript:void(0)" onclick="_update.fcrop_photo('160','160',null,'2');">裁剪图片160*160,不传projecttag,传upToServer:2</a>
+
+
+
+
+</div>
+
+</body>
+</html>
