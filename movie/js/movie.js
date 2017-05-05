@@ -33,7 +33,7 @@ $(function(){
     })
     //监听滑动动作
     $(window).scroll(function () {
-
+        debugger
         var windowHeight=$(window).height();//获取当前可见区域的高度
         var documentHeight=$(document).height();//获取文档的高度
 //            alert("windowHeight:"+windowHeight+";"+"documentHeight:"+documentHeight)

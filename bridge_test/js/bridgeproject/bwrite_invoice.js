@@ -37,7 +37,7 @@ $(function () {
      *
      *     getDataParams= {
      *         reqBodyObj: {
-     *             "memberId": "mid_0000000",
+     *             "memberId": "",//不能写真实id为空
      *             "orderId": "o1111",
      *             "orderSerialId": "s_order1",
      *             "monthCount": "6"

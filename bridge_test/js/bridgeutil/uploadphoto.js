@@ -30,7 +30,7 @@ $(function () {
      *         reqBodyObj: {
      *              "uploadType" : "1",
      *              "projectTag" : "ceshi",
-     *              "memberId" : "0f585ab28c7c7b976a2ae8c831f07cf9",
+     *              "memberId" : "",//不能写真实id为空
      *
      *              //客户端请求自动填充节点，服务端需实现对应实现
      *              "picUploadList": [
@@ -118,7 +118,7 @@ $(function () {
                         "reqBodyObj":{
                             "uploadType" : "1",
                             "projectTag" : "guoneiyou",
-                            "memberId" : "0f585ab28c7c7b976a2ae8c831f07cf9",
+                            "memberId" : "",//不能写真实id为空
                         },
                         "servicename":"ImageUpload",
                         "requrl":"https://tcmobileapi.17usoft.com/common/General/ImageUploadHandler.ashx",
@@ -143,7 +143,7 @@ $(function () {
                         "reqBodyObj":{
                             "uploadType" : type,
                             "projectTag" : "guoneiyou",
-                            "memberId" : "0f585ab28c7c7b976a2ae8c831f07cf9",
+                            "memberId" : "",//不能写真实id为空
                         },
                         "servicename":"ImageUpload",
                         "requrl":"https://tcmobileapi.17usoft.com/common/General/ImageUploadHandler.ashx",

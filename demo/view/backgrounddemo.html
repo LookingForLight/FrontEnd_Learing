@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+   .indexbg{
+       position: absolute;
+
+       width: 100%;
+       height: 100%;
+       background-image: url("//file.40017.cn/tcweb/swact/170425jyds/img/page_bg.jpg");
+       background-repeat: no-repeat;
+       /*background-position: center center;*/
+       background-size: 100% 100%;
+       /*padding-bottom: 20%;*/
+
+   }
+    .rules{
+        display: none;
+        width:100%;
+        height: 100%;
+        position: absolute;
+        background: #0A0A0A;
+        font-size: 13px;
+        color: #A19683;
+        line-height: 1.51;
+        left: 0;
+        top: 0;
+        text-align: center;
+
+        z-index: 9;
+    }
+    .ruleTtl{
+        width: 80%;
+        padding-bottom: 5%;
+        margin: 10% auto 8%;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(161,150,131,0.3);
+    }
+    .ruleContent{
+        width: 85%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .closeBtn{
+        width:16%;
+        margin: 10% auto 0;
+    }
+    img{
+        width: 100%;
+    }
+</style>
+<body>
+<div class="indexbg">
+    <input class="show" type="button" value="click">
+</div>
+<div class="rules">
+    <p class="ruleTtl">活动规则</p>
+    <p class="ruleContent">
+        1. 页面共四个互动游戏，每个游戏不限次数，小游戏每关最高分45分，总分180分，得分以最后一次完成的分数进行更新统计；<br /><br />
+        2. 完成游戏的用户有机会获得《记忆大师》电影票兑换码或同程旅游红包抵用券 ；<br /><br />
+        3. 电影票兑换码可直接在万达电影APP上直接进行兑换，VIP播放厅不可选择；<br /><br />
+        4. 同程旅游红包将直接放入您的账号中，您可在同程旅游app中“我的”-“我的红包”中进行查看和使用；<br /><br />
+        5. 红包有效期及使用规则请查看红包页面的使用详情介绍，请在有效期内使用；<br /><br />
+        6. 如发现任何作弊行为，将取消该用户获得奖励的资格；<br /><br />
+        7. 该活动有任何疑问请拨打电话4007777777咨询。
+    </p>
+    <p class="closeBtn"><img src="//file.40017.cn/tcweb/swact/170425jyds/img/close_btn.png" /></p>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/demo.js"></script>
+<script>
+    $(function () {
+
+        var docWidth = $(window).width()
+        var docHeight =  $(window).height();
+        if((docWidth/docHeight)>0.63){
+            $('.rules').css('padding-bottom','20%')
+        }
+        $(".show").click(function () {
+
+            $(".rules").show();
+        })
+    })
+</script>
+</body>
+</html>
