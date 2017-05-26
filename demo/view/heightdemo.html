@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Height Demo</title>
+</head>
+<style>
+    #box,#box2,#box3,#box4,#box5,#box6{
+        width:200px;
+        height:200px;
+        margin:20px;
+        padding:20px;
+        border:4px solid #f00;
+        background-color:#000;
+        color:#eee;
+        float:left;
+    }
+</style>
+<body>
+<div id="box"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+<div id="box5"></div>
+<div id="box6"></div>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+    $(function(){
+        var h1=$("#box").height();
+        var h2=document.getElementById("box2").offsetHeight;
+        var h3=document.getElementById("box3").clientHeight;
+        var h4=document.getElementById("box4").scrollHeight;
+        var h5=$("#box5").innerHeight();
+        var h6=$("#box6").outerHeight();
+        document.getElementById("box").innerHTML=h1;
+        document.getElementById("box2").innerHTML=h2;
+        document.getElementById("box3").innerHTML=h3;
+        document.getElementById("box4").innerHTML=h4;
+        document.getElementById("box5").innerHTML=h5;
+        document.getElementById("box6").innerHTML=h6;
+    })
+</script>
+</html>

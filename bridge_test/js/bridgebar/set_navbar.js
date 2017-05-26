@@ -1,5 +1,8 @@
 /**
  * Created by zl29801 on 2017/4/6.
+ * _tc_bridge_bar.set_navbar_hidden
+ * _tc_bridge_bar.set_toolbar_hidden
+
  */
 
 $(function () {
@@ -415,7 +418,132 @@ $(function () {
 
         _tc_bridge_bar.set_navbar(jsonObj)
     }
+//     标题栏设置，分为left（返回按钮），center（标题部分），right（右侧按钮）。可以选择设置其中的部分参数。
+//
+// isNavbarHidden : "true"/"false" (optional)
+//     "true":标题栏隐藏；"false"：标题栏显示
+//
+//     Defaults to: "false"
+//     keepNavbarStatus : "true"/"false" (optional) //816已废弃
+//     页面切换时，iphone保持头部显隐状态，"false"默认不保持；"true":保持显隐状态。新项目需要隐藏头部时建议设置该值为"true"。 since 8.0.4
+//
+//     Defaults to: "false"
+    $.fset_navbar_hidden=function (isNavbarHidden) {
 
 
+        var jsonObj={
+
+            param:{
+
+                "isNavbarHidden": true
+            }
+        }
+        jsonObj.param.isNavbarHidden = isNavbarHidden;
+
+        _tc_bridge_bar.set_navbar_hidden(jsonObj)
+    }
+
+    $.fset_toolbar_hidden = function (sign) {
+
+        var jsonObj={
+
+            param:{
+
+                "isToolbarHidden": sign
+            }
+        }
+        _tc_bridge_bar.set_toolbar_hidden(jsonObj)
+    }
+//     popupLocation : String
+//     popup标识图标位置，标题栏右侧按钮的名称，如果无法匹配，默认标题最后一个按钮
+//     popupList : Array
+//     popup window显示内容列表，1-6个。
+//
+// name : String
+//     显示的名称
+//     icon : String (optional)
+//     item展示的图标
+//
+//     描述	icon	支持版本	说明
+//     分享	i_share
+//     搜索	i_search
+//     首页	i_home
+//     消息	i_msg
+//     使用默认图标	其他
+//     dataImage : String (optional)
+//     data:image数据，客户端内部转图标，传入时需控制图片大小
+//     imagePath : String (optional)
+//     图标地址，需要混合包内图片地址
+//
+//     // 图片设置说明：
+//     // 图标显示优先级顺序为 dataImage > imagePath > icon;前端可选择需要的进行设置。三个选一种方式设置
+//     // app内标题右上角图片，一般为50px左右，注意周围保留透明，可与客户端内类似。
+//     // base64图片转换地址：http://tool.lu/base64image/
+//     hotMark : "false"/"true" (optional)
+//     红点标识 true：显示红点；false：不显示（默认）跟消息提醒无关，设置imMark不需要设置改值。
+//
+// Defaults to: "false"
+//     imMark : "false"/"true" (optional)
+//     im标识图层 true显示；false默认不显示
+//
+//     Defaults to: "false"
+    _popup = {
+
+        show_navbar_popup:function (popupLocation,type) {
+
+            var jsonObj={
+
+                param: {
+                    tagname: "click_popup",
+                    popupLocation: "",// popup标识图标位置，标题栏右侧按钮的名称，如果无法匹配，默认最后一个
+                    popupList: [// 最多6个
+                        {
+                            icon: "i_more", //app默认图标 支持：i_share,i_search,i_home,i_msg;如果设置了不存在的图片显示默认图片
+                            name: "更多",
+                            dataImage: "", //data:image数据，客户端内部转图标，传入时需控制图片大小
+                            imagePath: "", //图标地址，需要混合包内图片地址
+                            hotMark: "",// 红点标识 true：显示红点；false：不显示（默认）
+                            imMark: "true",// im标识图层 true显示；false默认不显示
+                            tagname: "tag_click_more", // 必传，用于区分回调的标识
+                        }, {
+                            icon: "i_msg", //app默认图标
+                            name: "消息",
+                            dataImage: "", //data:image数据，客户端内部转图标
+                            imagePath: "", //图标地址，需要混合包内图片地址
+                            hotMark: "",// 红点标识 true：显示红点；false：不显示（默认）
+                            imMark: "true",// im标识图层 true显示；false默认不显示
+                            tagname: "tag_click_msg", // 回调前端的标识
+                        }, {
+                            icon: "i_msg",
+                            name: "hot msg",
+                            hotMark: "true",
+                            tagname: "tag_msg"
+                        }, {
+                            icon: "i_share",
+                            name: "dataImage",
+                            tagname: "tag_share_s",
+                            dataImage: enumDataImageIcon.s_img
+                        }, {
+                            icon: "i_share",
+                            name: "大图测试",
+                            tagname: "tag_share_b",
+                            dataImage: enumDataImageIcon.b_img
+                        }, {
+                            icon: "i_favorite",
+                            name: "收藏",
+                            tagname: "tag_favorite"
+                        }]
+                },
+                callback: function (data) {
+                    alert("callback:" + JSON.stringify(data));
+                }
+            }
+
+            if (!!popupLocation) {
+                jsonObj.param.popupLocation = popupLocation;
+            }
+            _tc_bridge_bar.show_navbar_popup(jsonObj);
+        }
+    }
 })
 

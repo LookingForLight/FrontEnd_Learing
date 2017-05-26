@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>read_directory.html</title>
+    <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../../css/base.css" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+
+    <h4>read_hybrid_directory_info</h4>
+    <p>读取混合项目本地目录</p>
+    <p>830增加该api</p>
+    <a href="javascript:void(0)" class="comunicate-native" onclick="_get.fread_dir('5')">projectid=5</a>
+    <a href="javascript:void(0)" class="comunicate-native" onclick="_get.fread_dir('18')">projectid=18</a>
+    <a href="javascript:void(0)" class="comunicate-native" onclick="_get.fread_dir('20')">projectid=20</a>
+
+    <h4>send_error_info</h4>
+    <p>实时统计webview页面错误信息接口
+
+    </p>
+    <p>830增加该api</p>
+    <a href="javascript:void(0)" class="comunicate-native" onclick="_get.fsend_error()">send_error_info</a>
+
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="http://appnew.t.ly.com/fed/webapp/js/bridge/bridge.2.3.0.js?v=1"></script>
+<script src="../../js/bridgeweb/read_directory.js"></script>
+</body>
+</html>

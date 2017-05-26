@@ -76,7 +76,7 @@ $(function () {
     _project={
 
 
-        fwrite_invoice:function (isSelected) {
+        fwrite_invoice:function (isSelected,iscallback) {
 
             var jsonObj={
 
@@ -100,6 +100,10 @@ $(function () {
                     // "bottomTips":'<b><font color="#ff0000">*</font></b> <b>发票面值</b><br><font color="#ff6815">#123。</font><small>审核后5日内寄出。</small>',
                     "bottomTips":'<b>*</b> <b>发票面值哈哈哈哈</b><br></b>哈哈哈哈哈哈哈哈哈</b>',
 
+                },
+                callback:function (data) {
+
+                    alert("data:"+JSON.stringify(data))
                 }
             }
             //显示选中发票的信息
@@ -113,10 +117,47 @@ $(function () {
 
                 }
             }
+            if (!iscallback){
+                // 这个是测试的接口配置，真实调用使用项目自己的接口
+                jsonObj.param.getDataParams = {
+                    // reqBodyObj: {
+                    //     "orderSerialId": "mv573d5022210880d086",
+                    //     "projectTag": "dianying",
+                    //     "memberIdTest": "",
+                    //     "test": "paramsTest",
+                    //     "userPhoneNo": "13814850432",
+                    //     "orderId": "160519133323833197"
+                    // },
+                    // servicename: "save_invoice",
+                    // requrl: "http://61.155.197.173:8008/Flight/queryhandler.ashx"
+                    reqBodyObj: {
+                        "orderSerialId": "mv573d5022210880d086",
+                        "projectTag": "dianying",
+                        // "memberIdTest": "",
+                        "test": "paramsTest",
+                        "userPhoneNo": "13814850432",
+                        "orderId": "160519133323833197"
+                    },
+                    servicename: "GETORDERPAYDETAIL",
+                    requrl: "http://61.155.197.173:8008/ordercenter/Order/OrderListHandler.ashx"
+                }
+            }
             //去掉测试发票中的invoiceDesc字段
             if (isSelected=="2"){
 
                 delete jsonObj.param.invoiceContentInfoList[0].invoiceDesc;
+            }
+            //830 增加
+            //发票类型 0：纸质发票 | 1：电子发票 since 8.3.0
+            if(isSelected=="3"){
+
+                jsonObj.param.invoiceType="1"
+                jsonObj.param.emailAddress="zl29801@ly.com"
+            }
+            if(isSelected=="4"){
+
+                jsonObj.param.invoiceType="0"
+                jsonObj.param.emailAddress="zl29801@ly.com"
             }
             _tc_bridge_project.write_invoice(jsonObj);
         }

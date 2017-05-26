@@ -6,10 +6,6 @@
     <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link href="../../css/base.css" rel="stylesheet">
 
-    <script src="../../js/jquery.js"></script>
-
-    <script src="../../js/bridge.2.2.6.js"></script>
-    <script src="../../js/bridgebar/im_summary.js"></script>
 
 
 </head>
@@ -21,7 +17,18 @@
         页面切换需要重新注册</p>
     <a href="javascript:void(0)" onclick="$.fcheck_im_summary();">获取并监听im信息变化</a>
     <a href="javascript:void(0)" onclick="$.fcheck_im_summary('false','false');">只获取im信息，不监听变更</a>
+
+    <h4>设置 显示navbar 上的close按钮,返回前一个页面时有效</h4>
+    <a href="javascript:void(0)" onclick="_close.fshow_navbar_close_icon('1');">触发返回功能时，显示关闭按钮;</a>
+    <a href="javascript:void(0)" onclick="_close.fshow_navbar_close_icon('0');">触发返回功能时，隐藏关闭按钮;</a>
+
+
+
 </div>
 
+<script src="../../js/jquery.js"></script>
+
+<script src="http://appnew.t.ly.com/fed/webapp/js/bridge/bridge.2.3.0.js?v=1"></script>
+<script src="../../js/bridgebar/im_summary.js"></script>
 </body>
 </html>

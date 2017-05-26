@@ -8,10 +8,6 @@
     <meta name='viewport'content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link href="../../css/base.css" rel="stylesheet">
 
-    <script src="../../js/jquery.js"></script>
-
-    <script src="../../js/bridge.2.2.6.js"></script>
-    <script src="../../js/bridgebar/set_navbar.js"></script>
 
 
 </head>
@@ -65,12 +61,31 @@
     <a href="javascript:void(0)" onclick="$.fset_navbar_of_dataimage(2);">使用 dataImage，含data:image</a>
     <a href="javascript:void(0)" onclick="$.fset_navbar_of_dataimage(5);">dataImage>icon</a>
 
+    <h4>_tc_bridge_bar.set_navbar_hidden</h4>
+    <p>标题栏显隐设置</p>
 
+    <a href="javascript:void(0)" onclick="$.fset_navbar_hidden('true');">隐藏标题</a>
+    <a href="javascript:void(0)" onclick="$.fset_navbar_hidden('false');">显示标题</a>
+
+
+    <h4>_tc_bridge_bar.set_toolbar_hidden</h4>
+    <p>底部工具栏显隐设置</p>
+    <a href="javascript:void(0)" onclick="$.fset_toolbar_hidden('true');">隐藏底部工具栏</a>
+    <a href="javascript:void(0)" onclick="$.fset_toolbar_hidden('false');">显示底部工具栏</a>
+
+    <a class="jump" name="popup">右侧popup</a>
+    <a href="javascript:void(0)" onclick="_popup.show_navbar_popup();">弹出右侧弹窗</a>
+    <p>执行该用例前，请先点击 设置不可点击标题含有分享按钮(回调H5) 用例</p>
+    <a href="javascript:void(0)" onclick="_popup.show_navbar_popup('tag_click_share');">在分享按钮下弹出右侧弹窗</a>
 
 
 
 
 </div>
 
+<script src="../../js/jquery.js"></script>
+
+<script src="../../js/bridge.2.2.6.js"></script>
+<script src="../../js/bridgebar/set_navbar.js"></script>
 </body>
 </html>
