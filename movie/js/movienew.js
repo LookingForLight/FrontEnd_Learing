@@ -11,7 +11,7 @@ $(function(){
     var pageIndex=1;//默认值为1，请求参数 pageindex的值
     function getmovies(page) {
         $.ajax({
-            url:"http://10.101.64.25:3000/test",
+            url:"http://10.101.52.80:3000/test",
 
             type:"get",
             dataType:'json',
@@ -87,8 +87,8 @@ $(function(){
                 getmovies(pageIndex)
                 $('.noloading').css("display","none")//隐藏没有数据的提示
                 $('.loading').css("display","block")//显示正在加载的提示
-                 console.log(pageIndex)
-          }else{
+                console.log(pageIndex)
+            }else{
                 //如果数据已经加载完，隐藏正在加载，显示已全部加载
                 $('.noloading').css("display","block")
                 $('.loading').css("display","none")

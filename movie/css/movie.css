@@ -1,10 +1,10 @@
-@media screen and (min-width:321px) and (max-width:375px){div{font-size:11px}}
-@media screen and (min-width:376px) and (max-width:414px){div{font-size:12px}}
-@media screen and (min-width:415px) and (max-width:639px){div{font-size:15px}}
-@media screen and (min-width:640px) and (max-width:719px){div{font-size:20px}}
-@media screen and (min-width:720px) and (max-width:749px){div{font-size:22.5px}}
-@media screen and (min-width:750px) and (max-width:799px){div{font-size:23.5px}}
-@media screen and (min-width:800px){div{font-size:25px}}
+/*@media screen and (min-width:321px) and (max-width:375px){div{font-size:11px}}*/
+/*@media screen and (min-width:376px) and (max-width:414px){div{font-size:12px}}*/
+/*@media screen and (min-width:415px) and (max-width:639px){div{font-size:15px}}*/
+/*@media screen and (min-width:640px) and (max-width:719px){div{font-size:20px}}*/
+/*@media screen and (min-width:720px) and (max-width:749px){div{font-size:22.5px}}*/
+/*@media screen and (min-width:750px) and (max-width:799px){div{font-size:23.5px}}*/
+/*@media screen and (min-width:800px){div{font-size:25px}}*/
 
 * {
 
@@ -14,10 +14,11 @@
     border:0;
 
 }
-p{
-
-    font-size: 18px;
+body{
+    font-size: 16px;
+    font-family: "微软雅黑";
 }
+
 
 .page-header{
     position: relative;
@@ -61,20 +62,23 @@ p{
 .center .reying{
 
     height: .8rem;
-    /*line-height: .8rem;*/
+    line-height: .25rem;
     padding: .288rem;
     background-color: #eaebed;
     color: #989898;
     border-top-left-radius: .2rem;
     border-bottom-left-radius: .2rem;
+    font-size: 14px;
 
 }
 .center .daiying{
     height: .8rem;
+    line-height: .25rem;
     padding: .288rem;
     background-color: #eaebed;
     border-top-right-radius: .2rem;
     border-bottom-right-radius: .2rem;
+    font-size: 14px;
     color: #989898;
 }
 .center .tabactive{
@@ -82,6 +86,8 @@ p{
     background-color: #2fbd59;
     color: #fff;
 }
+
+
 
 
 
@@ -147,187 +153,88 @@ p{
     background-color: #e7e7e7;
     text-align: center;
 }
-.list_item i, .list_item em {
-    font-style: normal;
-    font-weight: normal;
+
+.movie_list{
+
+    display: flex;
+    flex-direction: column;
+}
+.movie_list .info{
+
+    display: flex;
+    flex-direction: row;
+    margin: .1rem 0;
+
+}
+.m-img{
+    width: 64px;
+    height: 84px;
+    margin: .1rem;
 }
 
-a {
-    text-decoration: none;
+.m-img img{
+
+    width: 64px;
+    height: 84px;
+}
+.name{
+
+    display: inline;
+}
+.name .type{
+
+    margin-left: .2rem;
 }
 
-.list_item .m_item {
+.m-other{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: .1rem;
+    width: 4.5rem;
+
+}
+.m-other .desc{
+
+    font-size: 14px;
     overflow: hidden;
-    display: block;
-    padding: 10px 10px 12px;
+    text-overflow: ellipsis;
+    word-break: normal;
+    white-space: nowrap;
+    color: #666;
+}
+.m-other .player{
+
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: normal;
+    white-space: nowrap;
+    color: #999;
+}
+.buy{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin: .1rem;
 }
 
-.right_con .m_score {
-    float: right;
+.buy .score{
+
+    text-align: right;
     color: #ff9a00;
-    font-size: 16px;
-    line-height: 24px;
-    white-space: nowrap;
-    margin-top: 3px;
 }
 
-.right_con .m_score:after {
-    content: '分';
-    font-size: 12px;
-    padding-left: 2px;
-}
-
-.list_item .m_btn {
-    position: absolute;
-    bottom: 4px;
-    right: 0;
-}
-
-.m_btn {
+.buy .book{
     font-size: 13px;
-    padding: 4px 17px;
-    background-color: transparent;
-    border-radius: 4px;
-    color: #fff;
-    display: inline-block;
-    vertical-align: top;
-    white-space: nowrap;
-}
-
-#MyIndexJiJiang .m_btn.m_advance {
-    bottom: 24px;
-}
-
-.m_btn.m_sold {
+    border-radius: .1rem;
+    padding: .1rem;
+    text-align: center;
     background-color: #ff8400;
 }
 
-.m_btn.m_advance {
-    background-color: #2ebd59;
+.book:hover{
+
+    background-color: #50b400;
 }
-
-.list_item .right_con {
-    position: relative;
-    margin: 0 0px 4px 68px;
-}
-
-.list_item .right_con h4 {
-    margin-right: 30px;
-    font-weight: normal;
-    font-size: 16px;
-    padding: 4px 0 7px;
-    color: #000;
-    max-height: 45px;
-    overflow: hidden;
-    line-height: 1.2;
-}
-
-.list_item .left_img {
-    float: left;
-    width: 62px;
-    height: 84px;
-}
-
-.list_item .left_img img {
-    width: 62px;
-    height: 84px;
-}
-
-.list_item .right_con .con_b {
-    margin-right: 80px;
-}
-
-.list_item .right_con p {
-    color: #666;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 12px;
-    line-height: 20px;
-}
-
-.list_item .right_con p.desc {
-    margin-top: 8px;
-}
-
-.list_item .right_con p.status {
-    color: #999;
-}
-
-.m_name {
-    display: inline-block;
-    max-width: 65%;
-    line-height: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: middle;
-}
-
-.m_icon {
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 3px;
-    border: 1px solid #a5a8ae;
-    overflow: hidden;
-    vertical-align: middle;
-    margin-top: -1px;
-}
-
-.m_icon i {
-    float: left;
-    background: #a5a8ae;
-    color: #fff;
-    padding: 0 1px;
-}
-
-.m_icon em {
-    float: left;
-    color: #a5a8ae;
-    box-sizing: border-box;
-    padding: 0 1px;
-}
-
-.act_info {
-}
-
-.act_info a {
-    font-size: 12px;
-    display: block;
-    line-height: 32px;
-    overflow: hidden;
-}
-
-.act_info a .act_n {
-    float: left;
-    width: 68px;
-    text-align: right;
-}
-
-.act_info a .act_n i {
-    padding: 1px 2px;
-    color: #ff6633;
-    border: 1px solid #ff6633;
-    border-radius: 2px;
-}
-
-.act_info a .act_c {
-    display: block;
-    margin-left: 78px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.m_like {
-    color: #ff9a00;
-    float: right;
-    font-size: 12px;
-}
-
-.m_like em {
-    font-size: 14px;
-}
-
-
-
