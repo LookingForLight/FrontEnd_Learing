@@ -12,6 +12,9 @@ $(function(){
     var upcomingdom="";//用来拼接并存储upcoming接口的返回值
     var mdata=[];//空数组
     var mdata2=[];//空数组
+    var arraylist= new Array();
+    var ry_status =$('.movieitems').css("display");;
+    var up_status = "";
     function getmovies(page) {
         $.ajax({
             url:"http://10.101.52.80:3000/test",
@@ -96,7 +99,7 @@ $(function(){
             success:function (data) {
                 mdata2=data.data;
                 totalpage=data.len;
-                // renderUpcoming(mdata2)
+                renderUpcoming(mdata2)
 
             },
             error:function (er) {
@@ -113,8 +116,21 @@ $(function(){
 
             var date = data[i].date;
             //
-            upcomingdom+='<li>            <div>'+data[i].date+'</div></li>'
-
+            upcomingdom +='<li class="mitem">'+
+                '<div class="upcoming-date" flag="'+data[i].flag+'">'+data[i].date+'</div>'+
+            '<div class="content">'+
+                '<div class="mimage">'+
+                '<img src="http://pic4.40017.cn/movie/2016/07/26/02/WAd7k1_140x210_02.jpg">'+
+                '</div>'+
+                '<div class="mdesc">'+
+                '<p>'+data[i].name+'</p>'+
+                '<p>'+data[i].desc+'</p>'+
+                '</div>'+
+                ' <div class="yushou">'+
+                '<span class="book">'+'预售'+'</span>'+
+                '</div>'+
+                '</div>'+
+            '</li>'
         }
         // htmldom+=data;//拼接数据
         console.log(upcomingdom)
@@ -143,7 +159,13 @@ $(function(){
             pageIndex+=1;//pageIndex+1
             //如果totalCount>pageIndex则继续请求获取数据的接口
             if(totalpage>=pageIndex){
-                getmovies(pageIndex)
+                if (ry_status=="block"){
+                    getmovies(pageIndex)
+                }
+                if (up_status=="block"){
+                    getUpcoming(pageIndex)
+
+                }
                 $('.noloading').css("display","none")//隐藏没有数据的提示
                 $('.loading').css("display","block")//显示正在加载的提示
                 console.log(pageIndex)
@@ -163,7 +185,11 @@ $(function(){
         $(this).addClass("tabactive")
         $('.movieitems').css("display","none");
         $('.upcoming').css("display","block");
-        getUpcoming(1);
+        ry_status=$('.movieitems').css("display")
+        up_status=$('.upcoming').css("display");
+        pageIndex=1;
+        // getUpcoming(1);
+        getUpcoming(pageIndex)
 
 
     })
@@ -176,6 +202,9 @@ $(function(){
         $(this).addClass("tabactive")
         $('.movieitems').css("display","block");
         $('.upcoming').css("display","none");
+        ry_status=$('.movieitems').css("display");
+        up_status=$('.upcoming').css("display");
+        pageIndex=1;
 
 
     })
@@ -184,5 +213,29 @@ $(function(){
     function init() {
         getmovies(pageIndex);
     }
+
+
+        //
+        // function removesome() {
+        //     $(".mitem .upcoming-date").each(function (index,value) {
+        //
+        //         if ($(value).attr("flag")==undefined){
+        //             console.log($(value));
+        //             if(arraylist.indexOf($(value).html())!=-1){
+        //                 console.log(arraylist.indexOf($(value).html()));
+        //                 $(value).hide();
+        //
+        //             }else {
+        //
+        //                 arraylist.push($(value).html());
+        //                 $(value).attr("flag",true);
+        //             }
+        //
+        //         }
+        //     })
+        // }
+
+
+
     init();
 })
