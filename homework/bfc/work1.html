@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧固定右侧自适应两栏布局</title>
+    <style>
+
+        .name{
+
+            float: left;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+            width: 118px;
+            margin-left: 100px;
+        }
+        .childname{
+
+            height: 40px;
+            border-bottom: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+            padding-left: 10px;
+            line-height: 40px;
+        }
+        .head{
+            padding-left: 10px;
+            line-height: 40px;
+            font-weight: bold;
+            color: #333333;
+            background: #ffffff;
+            height: 40px;
+            border-bottom: 2px solid #dddddd;
+            border-right: 1px solid #dddddd;
+
+        }
+        .active{
+
+            background-color: #f9f9f9;
+        }
+        .desc{
+
+            overflow: hidden;
+            border-top: 1px solid #dddddd;
+            /*border-top: 1px solid red;*/
+            margin-right:100px;
+            white-space: nowrap;
+
+        }
+        .content{
+
+            height: 40px;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            padding-left: 10px;
+            line-height: 40px;
+        }
+
+        span{
+
+            background-color: #F9F2F4;
+            color: #c7254e;
+        }
+    </style>
+</head>
+<body>
+<div class="table">
+<div class="name">
+   <div class="head">
+       CLASS
+   </div>
+    <div class="childname active">
+        <span>.active</span>
+    </div>
+    <div class="childname ">
+        <span>.success</span>
+    </div>
+    <div class="childname active">
+        <span>.info</span>
+    </div>
+    <div class="childname">
+        <span>.warning</span>
+    </div>
+    <div class="childname active">
+        <span>.danger</span>
+    </div>
+</div>
+<div class="desc">
+    <div class="head">
+        描述
+    </div>
+    <div class="content active">
+        标示单元格选中时所显示的颜色
+    </div>
+    <div class="content">
+        标识积极或成功的动作
+    </div>
+    <div class="content active">
+        标识用户警示或注意
+    </div>
+    <div class="content ">
+        标识危险或带来潜在危险的动作
+    </div>
+    <div class="content active">
+        标识用户警示或注意
+    </div>
+</div>
+</div>
+</body>
+</html>
