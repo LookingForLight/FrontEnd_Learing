@@ -1,0 +1,377 @@
+p,ul,li,body{
+    margin: 0;
+    padding: 0;
+}
+ui,li{
+
+    list-style: none;
+}
+.main{
+
+}
+.first-area{
+
+    background-color: #233545;
+    padding: 10px 80px 15px 20px;
+}
+.nav{
+    float: left
+}
+.logo{
+
+}
+.logo img{
+
+    margin-top:10px ;
+}
+.platform{
+    margin-left: 30px;
+
+}
+.pcolor{
+
+  color: #97a1ab;
+}
+.name{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 22px;
+}
+.angle{
+
+    height: 6px;
+    width: 9px;
+    margin-left: 50px;
+}
+.manage-module{
+    background-color: #293846;
+    border-left: 5px solid #19aa8b;
+}
+.chapter{
+    padding: 20px 40px 20px 12px;
+}
+.tags{
+
+    margin-left: 40px
+}
+.tag1{
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #ffffff;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+
+}
+.tag2{
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid #293846;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    margin-top: -20px;
+    margin-left: 2px;
+
+}
+
+.namelist{
+
+    margin-left: 60px;
+    padding-bottom: 10px;
+
+}
+
+.list{
+
+    margin: 10px 0px 10px;
+    font-size: 15px;
+    color:#6c7786 ;
+}
+.selected{
+
+    color: #ffffff;
+}
+
+.waihu-module{
+    background-color: #2f4050;
+    /*border-left: 5px solid #19aa8b;*/
+}
+
+.unexplosed{
+
+    color: #8994a4;
+}
+
+.taga{
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #8994a4;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+
+}
+.tagb{
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid #2f4050;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    margin-top: -20px;
+    margin-left: 2px;
+
+}
+
+.data-module{
+    background-color: #2f4050;
+    /*border-left: 5px solid #19aa8b;*/
+}
+
+.makeup{
+    background-color: #2f4050;
+}
+
+.head{
+
+    width: 100%;
+    background-color: #00B7FF;
+    height: 50px;
+}
+.content{
+
+    background-color: #ffffff;
+}
+.top-area{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top-area .more{
+
+    width: 40px;
+    height: 30px;
+    background-color: #1ab394;
+    border-radius: 2px;
+    margin-top:10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.more{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.more .line{
+
+    height: 0px;
+    width: 0px;
+    background-color: #ffffff;
+    padding: 1px 6px;
+    margin: 1px;
+}
+.top-area .login-out{
+    margin-top: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: #333333;
+}
+
+.label{
+    display: inline-block;
+    overflow: hidden;
+}
+.label .radio{
+    display: inline-block;
+    position: relative;
+    background: url("imgs/radio.png") no-repeat center;
+    width: 14px;
+    height: 10px;
+    left: -20px;
+    border-right: 20px solid transparent;
+
+}
+.label .cangle{
+    display: inline-block;
+    position: relative;
+    background: url("imgs/angle.png") no-repeat center;
+    width: 12px;
+    height: 8px;
+    left: -20px;
+    border-right: 20px solid transparent;
+}
+.online{
+    filter: drop-shadow(20px 0 #1ab394);
+}
+.outline{
+    filter: drop-shadow(20px 0);
+}
+.logout{
+    font-size: 14px;
+    color: #c6c6c6;
+
+}
+.status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15px;
+    color:#1ab394 ;
+}
+.status-name{
+
+    margin-left: -15px;
+    margin-right: 5px;
+}
+
+.middle-area{
+
+    background-color: #f3f3f4;
+    display: flex;
+}
+.middle-area .data-info{
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 26px 24px 0;
+
+}
+.today-data{
+
+    background-color: #ffffff;
+    border-top: 5px solid #e7eaec;
+    margin-bottom: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 25px;
+}
+.header img{
+    height: 15px;
+    width: 14px;
+}
+.today-data .data{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.data .darling{
+    padding: 30px 0;
+    background-color: #E8F6FF;
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+
+
+}
+.darling .darling-num{
+
+    font-size: 45px;
+    color: #1c84c6;
+}
+.explain{
+
+    color: #676a6c;
+}
+
+.data .called{
+    padding: 30px 0;
+    background-color: #E1F9F9;
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+}
+.called-num{
+
+    font-size: 45px;
+    color: #0dc3a5;
+}
+.notice{
+
+    flex: 1;
+    margin-left: 20px;
+}
+
+.myguest{
+
+    background-color: #ffffff;
+    border-top: 5px solid #e7eaec;
+    margin-bottom: 24px;
+}
+
+.myguest .data{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.box{
+    background-color: #f3f5f7;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px;
+
+}
+
+.box-num{
+    font-size: 40px;
+    color: #6a7987;
+}
+
+.myorder{
+    background-color: #ffffff;
+    border-top: 5px solid #e7eaec;
+    margin-bottom: 24px;
+}
+
+.myorder .data{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin:0 20px 24px;
+    background-color: #f3f5f7;
+    color: #6a7987;
+    padding: 40px 0;
+}
+.header .more2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.more2 i{
+    /*position: relative;*/
+    background: url("imgs/angle.png") no-repeat center;
+    width: 12px;
+    height: 8px;
+    transform: rotate(270deg);
+    margin-left: 5px;
+}
+
