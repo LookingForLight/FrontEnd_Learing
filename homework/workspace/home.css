@@ -7,7 +7,7 @@ ui,li{
     list-style: none;
 }
 .main{
-
+    /*display: flex;*/
 }
 .first-area{
 
@@ -15,7 +15,14 @@ ui,li{
     padding: 10px 80px 15px 20px;
 }
 .nav{
-    float: left
+    float: left;
+    /*flex:1;*/
+}
+.content{
+    display: flex;
+    background-color: #ffffff;
+    flex: 7;
+    flex-direction: column;
 }
 .logo{
 
@@ -90,6 +97,10 @@ ui,li{
     font-size: 15px;
     color:#6c7786 ;
 }
+.list:hover{
+
+    color: #ffffff;
+}
 .selected{
 
     color: #ffffff;
@@ -141,15 +152,13 @@ ui,li{
     background-color: #00B7FF;
     height: 50px;
 }
-.content{
 
-    background-color: #ffffff;
-}
 .top-area{
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex: 1;
 }
 .top-area .more{
 
@@ -158,7 +167,7 @@ ui,li{
     background-color: #1ab394;
     border-radius: 2px;
     margin-top:10px;
-    margin-left: 15px;
+    margin-left: 24px;
     margin-bottom: 10px;
 }
 .more{
@@ -178,7 +187,8 @@ ui,li{
 }
 .top-area .login-out{
     margin-top: 10px;
-    margin-right: 20px;
+    /*margin-right:  200px;*/
+    margin-right:  20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -242,10 +252,25 @@ ui,li{
 
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 2;
     margin: 26px 24px 0;
 
 }
+.middle-area .others{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    /*margin-right: 20px;*/
+    margin-right: 105px;
+}
+.middle-area .third{
+    flex: 1;
+
+}
+/*.middle-area .third{*/
+
+    /*flex: 1;*/
+/*}*/
 .today-data{
 
     background-color: #ffffff;
@@ -286,7 +311,8 @@ ui,li{
     color: #1c84c6;
 }
 .explain{
-
+    margin-top: 5px;
+    font-size: 16px;
     color: #676a6c;
 }
 
@@ -302,11 +328,7 @@ ui,li{
     font-size: 45px;
     color: #0dc3a5;
 }
-.notice{
 
-    flex: 1;
-    margin-left: 20px;
-}
 
 .myguest{
 
@@ -332,14 +354,15 @@ ui,li{
     overflow: hidden;
     white-space:nowrap;
     text-align: center;
-    padding: 20px;
+    /*padding: 20px;*/
+    padding: 15px 15px;
     flex: 1;
     margin: 0 10px;
 
 }
 
 .box-num{
-    font-size: 40px;
+    font-size: 45px;
     color: #6a7987;
 }
 
@@ -374,4 +397,136 @@ ui,li{
     transform: rotate(270deg);
     margin-left: 5px;
 }
+.main-notice{
 
+    flex: 1;
+    /*margin-right: 290px;*/
+}
+.remain{
+    width: 100px;
+}
+.notice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+    background-color: #ffffff;
+    border-top: 5px solid #e7eaec;
+    margin-top: 26px;
+    /*margin-right: 290px;*/
+
+    /*margin-bottom: 24px;*/
+}
+.notice-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+}
+.announcement,.recording,.document{
+
+    height: 48px;
+    padding: 0 30px;
+    flex: 1;
+    text-align: center;
+    line-height: 48px;
+    font-size: 22px;
+    color: #676a6c
+}
+
+.notice-selected{
+    border-bottom: 5px solid #1ab394;
+}
+.notice-list{
+
+    border-top: 1px solid #e7eaec;
+    margin: 0 20px;
+}
+
+.notice-list ul li{
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e7eaec;
+
+}
+
+.list2 li span{
+    display: block;
+    width: 350px;
+    font-size: 16px;
+    color: #676a6c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list2 li span:hover{
+    font-size: 16px;
+    color: #676a6c;
+    font-weight: bold;
+}
+
+small{
+    margin-right: 20px;
+    color: #676a6c;
+}
+
+.notice .more3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+    color: #6a7987;
+    justify-content: center
+}
+.more3 i{
+    /*position: relative;*/
+    background: url("imgs/angle.png") no-repeat center;
+    width: 12px;
+    height: 8px;
+    transform: rotate(270deg);
+    margin-left: 5px;
+}
+
+.quicknav{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-top: 5px solid #e7eaec;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    /*margin-right: 290px;*/
+}
+
+.quicknav .quicknav-name{
+
+    margin: 20px 20px 0;
+    font-size: 16px;;
+}
+
+.quicknav .data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-between;
+    margin: 10px 20px 24px;
+    flex-wrap: wrap;
+}
+
+.quicknav .data span{
+    padding: 20px 30px;
+    background-color: #e7eaec;
+    white-space: nowrap;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.quicknav .data span:hover{
+
+    background-color: #1ab394;
+
+}

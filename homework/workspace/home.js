@@ -4,7 +4,7 @@
 
 $(function () {
     //padding适配
-    var windowHeight=$(window).height();//浏览器当前窗口可视区域高度
+    var windowHeight=$(document).height();//浏览器当前窗口可视区域高度
     console.log(windowHeight)
     var middleHeight=($(".content").height());//当前middle的高度
     console.log(middleHeight)
